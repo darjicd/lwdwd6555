@@ -1,7 +1,6 @@
 '''
 using discord.py version 1.0.0a
 '''
-from keep_alive import keep_alive
 import random
 import discord
 import asyncio
@@ -45,7 +44,7 @@ async def update_scores(content):
     global answer_scores
     global answer_scores_last
 
-    if re.match(r'(not)?[1-4](\?)?(apg)?',content) is None:
+    if re.match(r'(w)(not)?[1-4](\?)?(apg)?',content) is None:
         return False
 
     async with lock:
